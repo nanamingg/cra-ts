@@ -1,0 +1,20 @@
+import { FC, useState } from "react";
+
+const App: FC = () => {
+  const [count, setCount] = useState<number>(0);
+
+  const onClickCount = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div className="bg-red-100">
+      <div>{count}</div>
+      <div>
+        <button onClick={onClickCount}>+</button>
+      </div>
+    </div>
+  );
+};
+
+export default App;
